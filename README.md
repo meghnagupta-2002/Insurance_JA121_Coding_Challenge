@@ -18,7 +18,7 @@ A Java-based console application for managing insurance policies, using a MySQL 
 
 ## How to Run
 1. Set up MySQL with the database and table as shown above.
-2. Update `InsuranceServiceImp` with your database credentials.
+2. Update `db.properties` with your database credentials.
 3. Add the MySQL JDBC Driver (`mysql-connector-java.jar`) to your project classpath.
 4. Compile and run `MainModeule`:
    - `javac -cp .:mysql-connector-java.jar org/insurance/main/MainModeule.java`

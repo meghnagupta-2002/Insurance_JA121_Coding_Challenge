@@ -19,7 +19,7 @@ public class DBConnUtil {
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 // Extract connection string from PropertyUtil (assuming this is where the connection string is defined)
-                String connectionString = PropertyUtil.getPropertyString(); // Ensure this method is correct
+                String connectionString = PropertyUtil.getPropertyString(); 
                 connection = DriverManager.getConnection(connectionString);
                 System.out.println("Database connection established.");
             } catch (SQLException err) {
@@ -27,7 +27,7 @@ public class DBConnUtil {
                 throw new SQLException("Failed to establish Connection.", err);
             } catch (ClassNotFoundException err) {
                 err.printStackTrace();
-                throw new RuntimeException("Driver loading failed.", err); // Throw runtime exception if driver loading fails
+                throw new RuntimeException("Driver loading failed.", err); 
             }
         }
         return connection;
